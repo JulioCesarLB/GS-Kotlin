@@ -75,6 +75,10 @@ class MainActivity : ComponentActivity() {
 
             itemsAdapter.addItem(praia)
             editTextPraia.text.clear()
+            editTextEstado.text.clear()
+            editTextCidade.text.clear()
+
+
         }
     }
 }

@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace 'com.github.juliocesarlb.alunoResponsavel_rm94543'
-    compileSdk 33
+    compileSdk 34
 
     defaultConfig {
         applicationId "com.github.juliocesarlb.alunoResponsavel_rm94543"
         minSdk 24
-        targetSdk 33
+        targetSdk 34
         versionCode 1
         versionName "1.0"
 

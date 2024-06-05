@@ -25,11 +25,11 @@ class MainActivity : ComponentActivity() {
 
         setContentView(R.layout.activity_main)
 
-        val recyclerView = findViewById<RecyclerView>(R.id.recyclerView);
+        val recyclerView = findViewById<RecyclerView>(R.id.recyclerViewLista);
         val itemsAdapter = ItemsAdapter()
         recyclerView.adapter = itemsAdapter
 
-        val button = findViewById<Button>(R.id.button)
+        val button = findViewById<Button>(R.id.buttonIncluir)
         val editTextPraia = findViewById<EditText>(R.id.editTextPraia)
         val editTextCidade = findViewById<EditText>(R.id.editTextCidade)
         val editTextEstado = findViewById<EditText>(R.id.editTextEstado)
@@ -46,6 +46,19 @@ class MainActivity : ComponentActivity() {
             }
             if (editTextEstado.text.isEmpty()  ) {
                 editTextEstado.error = "Preencha um valor"
+                return@setOnClickListener
+            }
+
+            if (editTextEstado.text.toString().length<3  ) {
+                editTextEstado.error = "Tamanho insuficiente (necessário mais que 3)"
+                return@setOnClickListener
+            }
+            if (editTextCidade.text.toString().length<3  ) {
+                editTextCidade.error = "Tamanho insuficiente (necessário mais que 3)"
+                return@setOnClickListener
+            }
+            if (editTextPraia.text.toString().length<3  ) {
+                editTextPraia.error = "Tamanho insuficiente (necessário mais que 3)"
                 return@setOnClickListener
             }
 
